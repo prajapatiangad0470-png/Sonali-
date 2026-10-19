@@ -18,7 +18,6 @@
             transition: background 0.5s ease;
         }
         
-        /* Floating Background Hearts */
         .heart-bg { 
             position: absolute; 
             top: -10vh; 
@@ -34,7 +33,6 @@
             100% { transform: translateY(110vh) rotate(360deg); opacity: 0; } 
         }
 
-        /* Sparkle Wand Particles */
         .sparkle {
             position: fixed;
             pointer-events: none;
@@ -57,13 +55,11 @@
         }
         .subtitle { font-size: 0.95rem; color: #d6336c; font-weight: 600; margin-bottom: 15px; letter-spacing: 0.5px; }
 
-        /* Vibe / Mood Selector */
         .mood-selector { display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; background: rgba(255, 255, 255, 0.6); padding: 8px 16px; border-radius: 20px; backdrop-filter: blur(5px); }
         .mood-selector span { font-size: 0.85rem; font-weight: 600; color: #a81c51; }
         .mood-btn { background: #fff; border: 1.5px solid #ff758f; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: 0.2s; }
         .mood-btn:hover { background: #ff4d6d; color: white; }
 
-        /* Top Action Buttons */
         .top-actions { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
         .action-btn { 
             background: rgba(255, 255, 255, 0.9); 
@@ -80,12 +76,10 @@
         }
         .action-btn:hover { background: #ff4d6d; color: white; transform: translateY(-2px); border-color: #ff4d6d; }
 
-        /* View Toggle Tabs */
         .view-switch { display: flex; justify-content: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
         .switch-btn { background: #ffe3e8; color: #a81c51; border: none; padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer; transition: 0.2s; }
         .switch-btn.active { background: #ff4d6d; color: white; box-shadow: 0 4px 10px rgba(255,77,109,0.3); }
 
-        /* Grid View */
         #gridView { display: block; }
         .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; padding-bottom: 25px; }
         @media(min-width: 500px) { .grid-container { grid-template-columns: repeat(3, 1fr); } }
@@ -102,7 +96,6 @@
         .grid-item:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 12px 25px rgba(168, 28, 81, 0.25); }
         .grid-item img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* Polaroid View Mode */
         #polaroidView { display: none; padding-bottom: 25px; }
         .polaroid-container { display: grid; grid-template-columns: repeat(1, 1fr); gap: 20px; max-width: 500px; margin: 0 auto; }
         @media(min-width: 500px) { .polaroid-container { grid-template-columns: repeat(2, 1fr); max-width: 700px; } }
@@ -121,7 +114,6 @@
         .polaroid-img { width: 100%; height: 220px; object-fit: cover; border-radius: 2px; }
         .polaroid-caption { font-family: 'Caveat', cursive; font-size: 1.3rem; color: #333; margin-top: 12px; line-height: 1.2; }
 
-        /* Timeline View */
         #timelineView { display: none; padding-bottom: 25px; }
         .timeline { position: relative; max-width: 600px; margin: 0 auto; padding: 10px 0; }
         .timeline::after { content: ''; position: absolute; width: 4px; background: #ff758f; top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 2px; }
@@ -142,7 +134,6 @@
             .right { left: 0%; }
         }
 
-        /* Fullscreen View */
         #fullscreenView { 
             display: none; 
             position: fixed; 
@@ -239,7 +230,6 @@
             box-shadow: 0 4px 12px rgba(255, 143, 163, 0.3);
         }
 
-        /* 3D Flip Card Envelope Popup */
         .envelope-wrapper { perspective: 1000px; width: 100%; max-width: 380px; margin: 0 auto; }
         .flip-card-inner { transition: transform 0.8s; transform-style: preserve-3d; cursor: pointer; position: relative; width: 100%; min-height: 250px; }
         .flip-card-inner.flipped { transform: rotateY(180deg); }
@@ -247,16 +237,13 @@
         .flip-front { background: linear-gradient(135deg, #ff758f, #ff4d6d); color: white; border: 2px dashed #fff; }
         .flip-back { background: #ffffff; color: #4a4a4a; transform: rotateY(180deg); border: 2px solid #ff758f; text-align: left; }
 
-        /* Spin Wheel Styles */
         .wheel-box { position: relative; width: 220px; height: 220px; margin: 15px auto; }
         .wheel { width: 100%; height: 100%; border-radius: 50%; border: 6px solid #ff4d6d; position: relative; overflow: hidden; transition: transform 3s cubic-bezier(0.15, 0.99, 0.18, 0.99); background: conic-gradient(#ffccd5 0 60deg, #ffb3c1 60deg 120deg, #ff8fa3 120deg 180deg, #ff758f 180deg 240deg, #ff4d6d 240deg 300deg, #c9184a 300deg 360deg); }
         .wheel-pointer { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 20px solid #a81c51; z-index: 10; }
 
-        /* Jar Message Box */
         .jar-icon { font-size: 4rem; cursor: pointer; animation: bounce 2s infinite; }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-        /* Popups */
         .popup-overlay { 
             display: none; 
             position: fixed; 
@@ -288,7 +275,6 @@
         .popup-box p { font-size: 0.95rem; line-height: 1.6; color: #4a4a4a; margin-bottom: 15px; text-align: left; background: #fff0f3; padding: 14px; border-radius: 12px; }
         .close-popup { background: #ff4d6d; color: white; border: none; padding: 9px 24px; border-radius: 20px; font-weight: 600; cursor: pointer; margin-top: 10px; }
 
-        /* Inputs & Wish List */
         .input-box { width: 100%; padding: 10px; border-radius: 12px; border: 1.5px solid #ff758f; margin-bottom: 10px; font-size: 0.9rem; outline: none; }
         textarea.input-box { height: 75px; resize: none; }
         .save-btn { background: #a81c51; color: white; border: none; padding: 8px 18px; border-radius: 18px; font-weight: 600; cursor: pointer; margin-bottom: 12px; }
@@ -301,14 +287,12 @@
 </head>
 <body>
 
-    <!-- Floating Background Hearts -->
     <div id="heartsContainer"></div>
 
     <div class="container">
         <h1 class="main-title">For My Sweet Sister Sonali (Ishu) ❤️</h1>
         <p class="subtitle">Tap any photo or explore surprises below!</p>
 
-        <!-- Mood Indicator / Daily Vibe Check -->
         <div class="mood-selector">
             <span>🎭 Select Sonali's Mood Today:</span>
             <button class="mood-btn" onclick="setMood('happy')">😊 Happy</button>
@@ -317,7 +301,6 @@
             <button class="mood-btn" onclick="setMood('nostalgic')">✨ Nostalgic</button>
         </div>
 
-        <!-- Top Action Buttons -->
         <div class="top-actions">
             <button class="action-btn" onclick="toggleMusic()" id="musicBtn">🎵 Play Music</button>
             <button class="action-btn" onclick="openEnvelope()">💌 3D Envelope Card</button>
@@ -329,29 +312,24 @@
             <button class="action-btn" onclick="triggerCelebration()">🎉 Celebrate</button>
         </div>
 
-        <!-- View Switcher -->
         <div class="view-switch">
             <button class="switch-btn active" id="gridTabBtn" onclick="switchView('grid')">🖼️ Grid View</button>
             <button class="switch-btn" id="polaroidTabBtn" onclick="switchView('polaroid')">📸 Polaroid Scrapbook</button>
             <button class="switch-btn" id="timelineTabBtn" onclick="switchView('timeline')">⏳ Journey Timeline</button>
         </div>
 
-        <!-- Grid View -->
         <div id="gridView">
             <div class="grid-container" id="gridContainer"></div>
         </div>
 
-        <!-- Polaroid Scrapbook View -->
         <div id="polaroidView">
             <div class="polaroid-container" id="polaroidContainer"></div>
         </div>
 
-        <!-- Journey Timeline View -->
         <div id="timelineView">
             <div class="timeline" id="timelineContainer"></div>
         </div>
 
-        <!-- Fullscreen View -->
         <div id="fullscreenView">
             <div class="card-container">
                 <div class="badge" id="photoNumber">1 / 14</div>
@@ -369,7 +347,6 @@
             </div>
         </div>
 
-        <!-- 3D Flip Card Envelope Popup -->
         <div class="popup-overlay" id="envelopePopup">
             <div class="popup-box" style="background: transparent; border: none; box-shadow: none;">
                 <div class="envelope-wrapper">
@@ -391,7 +368,6 @@
             </div>
         </div>
 
-        <!-- Spin Wheel Popup -->
         <div class="popup-overlay" id="wheelPopup">
             <div class="popup-box">
                 <h2>Spin The Fortune Wheel 🎡</h2>
@@ -405,7 +381,6 @@
             </div>
         </div>
 
-        <!-- Message Jar Popup -->
         <div class="popup-overlay" id="jarPopup">
             <div class="popup-box">
                 <h2>Memory & Wish Jar 🏺</h2>
@@ -416,7 +391,6 @@
             </div>
         </div>
 
-        <!-- Surprise Gift Popup -->
         <div class="popup-overlay" id="giftPopup">
             <div class="popup-box">
                 <h2>Surprise Box 🎁</h2>
@@ -425,14 +399,13 @@
             </div>
         </div>
 
-        <!-- Secret Password Protected Diary Popup -->
         <div class="popup-overlay" id="diaryPopup">
             <div class="popup-box">
                 <h2>Sonali's Life Diary 📖</h2>
                 
                 <div id="diaryLockScreen">
                     <p style="text-align: center;">🔒 Enter Password to Unlock Your Secret Diary:</p>
-                    <input type="password" id="diaryPasswordInput" class="input-box" placeholder="Enter Password...">
+                    <input type="password" id="diaryPasswordInput" class="input-box" placeholder="Enter Password (Sonali)...">
                     <button class="save-btn" onclick="unlockDiary()">Unlock Diary 🔓</button>
                 </div>
 
@@ -450,7 +423,6 @@
             </div>
         </div>
 
-        <!-- Interactive Wishing Box Popup -->
         <div class="popup-overlay" id="wishPopup">
             <div class="popup-box">
                 <h2>Wishing & Message Box 💬</h2>
@@ -468,13 +440,13 @@
         <footer><p>Made with Endless Love for Sonali (Ishu) 💕</p></footer>
     </div>
 
-    <!-- Background Audio -->
-    <audio id="bgMusic" loop>
+    <!-- Multiple Music Sources Fallback -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
         <source src="music.mp3" type="audio/mp3">
     </audio>
 
     <script>
-        // Magic Wand Sparkle Particle Effect on Click
         document.addEventListener('click', function(e) {
             const sparkles = ['✨', '💖', '⭐', '🌸', '❤️'];
             for (let i = 0; i < 4; i++) {
@@ -494,7 +466,6 @@
             }
         });
 
-        // Floating Hearts
         const heartsContainer = document.getElementById('heartsContainer');
         for (let i = 0; i < 15; i++) {
             const heart = document.createElement('div');
@@ -506,7 +477,6 @@
             heartsContainer.appendChild(heart);
         }
 
-        // Mood Vibe Changer
         function setMood(mood) {
             if (mood === 'happy') {
                 document.body.style.background = 'linear-gradient(135deg, #ffdde1 0%, #ee9ca7 50%, #ffc3a0 100%)';
@@ -520,7 +490,6 @@
             triggerCelebration();
         }
 
-        // Spin Wheel Function
         const wheelPrizes = ["🍫 Free Chocolates Treat", "👑 Best Sister Badge", "🤗 Unlimited Hugs", "🍕 Pizza Party Promise", "🎁 Secret Surprise Gift", "🌟 1 Wish Granted by Bhai"];
         let wheelDegree = 0;
         function openWheel() { document.getElementById('wheelPopup').style.display = 'flex'; }
@@ -538,7 +507,6 @@
             }, 3000);
         }
 
-        // Jar Message Function
         const jarNotes = [
             "Bhai loves you the most! ❤️",
             "Duniya ki sabse pyari nautanki behan! ✨",
@@ -554,7 +522,6 @@
             triggerCelebration();
         }
 
-        // Music Toggle
         let isPlaying = false;
         const music = document.getElementById('bgMusic');
         function toggleMusic() {
@@ -563,18 +530,19 @@
                 document.getElementById('musicBtn').innerText = "🎵 Play Music";
                 isPlaying = false;
             } else {
-                music.play().catch(() => { alert("Pehle GitHub par 'music.mp3' file upload karein!"); });
-                document.getElementById('musicBtn').innerText = "🔇 Pause Music";
-                isPlaying = true;
+                music.play().then(() => {
+                    document.getElementById('musicBtn').innerText = "🔇 Pause Music";
+                    isPlaying = true;
+                }).catch((err) => { 
+                    alert("Music Play Nahi Ho Raha! Check karein ki GitHub repository par 'music.mp3' file exact isi naam se uploaded hai."); 
+                });
             }
         }
 
-        // Confetti Celebration Trigger
         function triggerCelebration() {
             confetti({ particleCount: 120, spread: 70, origin: { y: 0.6 } });
         }
 
-        // 3D Flip Card Envelope Controls
         function openEnvelope() {
             document.getElementById('envelopePopup').style.display = 'flex';
             document.getElementById('flipCard').classList.remove('flipped');
@@ -585,14 +553,13 @@
             triggerCelebration();
         }
 
-        // Popups
         function openGift() { 
             document.getElementById('giftPopup').style.display = 'flex'; 
             triggerCelebration();
         }
         function closeGift() { document.getElementById('giftPopup').style.display = 'none'; }
 
-        // Diary Functions
+        /* FIXED DIARY LOCK FUNCTION */
         function openDiary() { 
             document.getElementById('diaryPopup').style.display = 'flex';
             document.getElementById('diaryLockScreen').style.display = 'block';
@@ -601,15 +568,20 @@
         }
         function closeDiary() { document.getElementById('diaryPopup').style.display = 'none'; }
         function unlockDiary() {
-            if (document.getElementById('diaryPasswordInput').value === 'Sonali') {
+            const enteredPass = document.getElementById('diaryPasswordInput').value.trim();
+            if (enteredPass.toLowerCase() === 'sonali') {
                 document.getElementById('diaryLockScreen').style.display = 'none';
                 document.getElementById('diaryContentScreen').style.display = 'block';
                 loadDiaryEntries();
-            } else { alert("Incorrect Password! Hint: Sonali"); }
+                triggerCelebration();
+            } else { 
+                alert("Incorrect Password! Type 'Sonali' or 'sonali'"); 
+            }
         }
+
         function saveDiaryEntry() {
-            const title = document.getElementById('momentTitle').value;
-            const note = document.getElementById('momentNote').value;
+            const title = document.getElementById('momentTitle').value.trim();
+            const note = document.getElementById('momentNote').value.trim();
             if (!title || !note) return alert("Kripya dono fields bharein!");
             const entries = JSON.parse(localStorage.getItem('sonali_diary') || '[]');
             entries.unshift({ id: Date.now(), date: new Date().toLocaleDateString('en-GB'), title, note });
@@ -635,15 +607,14 @@
             loadDiaryEntries();
         }
 
-        // Wishing Box Functions
         function openWishBox() {
             document.getElementById('wishPopup').style.display = 'flex';
             loadWishes();
         }
         function closeWishBox() { document.getElementById('wishPopup').style.display = 'none'; }
         function saveWish() {
-            const sender = document.getElementById('wishSender').value;
-            const text = document.getElementById('wishText').value;
+            const sender = document.getElementById('wishSender').value.trim();
+            const text = document.getElementById('wishText').value.trim();
             if (!sender || !text) return alert("Kripya dono fields bharein!");
             const wishes = JSON.parse(localStorage.getItem('sonali_wishes') || '[]');
             wishes.unshift({ id: Date.now(), sender, text });
@@ -670,7 +641,6 @@
             loadWishes();
         }
 
-        // View Switcher
         function switchView(view) {
             document.getElementById('gridView').style.display = 'none';
             document.getElementById('polaroidView').style.display = 'none';
@@ -692,7 +662,6 @@
             }
         }
 
-        // Gallery Data
         const galleryData = [
             { img: "Sonali1.jpg", shayari: "Teri muskaan se roshan mera jahan ho jaye,\nTu jahan bhi rahe bas khushiyan wahan ho jaye." },
             { img: "Sonali2.jpg", shayari: "Bachpan ki wo shararat aur pyaari si ladai,\nSabse anmol hai behan, rab ne jo banai." },
@@ -712,20 +681,17 @@
 
         let currentIndex = 0;
 
-        // Render Views
         const gridContainer = document.getElementById('gridContainer');
         const polaroidContainer = document.getElementById('polaroidContainer');
         const timelineContainer = document.getElementById('timelineContainer');
 
         galleryData.forEach((item, index) => {
-            // Grid Item
             const gDiv = document.createElement('div');
             gDiv.className = 'grid-item';
             gDiv.innerHTML = `<img src="${item.img}" alt="Photo ${index + 1}">`;
             gDiv.onclick = () => openFullscreen(index);
             gridContainer.appendChild(gDiv);
 
-            // Polaroid Scrapbook Item
             const pDiv = document.createElement('div');
             pDiv.className = 'polaroid-card';
             pDiv.onclick = () => openFullscreen(index);
@@ -735,7 +701,6 @@
             `;
             polaroidContainer.appendChild(pDiv);
 
-            // Timeline Item
             const tDiv = document.createElement('div');
             tDiv.className = `timeline-container ${index % 2 === 0 ? 'left' : 'right'}`;
             tDiv.innerHTML = `
