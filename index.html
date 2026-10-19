@@ -1,0 +1,237 @@
+cat << 'EOF' > index.html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Beloved Sonali / Ishu ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="main-title">For My Dearest Sonali (Ishu) ❤️</h1>
+            <p class="subtitle">A Journey of Love & Memories</p>
+        </header>
+
+        <main class="card-container">
+            <div class="card">
+                <div class="badge" id="photoNumber">1 / 14</div>
+                <div class="image-wrapper">
+                    <img id="currentImg" src="Sonali1.jpg" alt="Sonali / Ishu">
+                </div>
+                <div class="shayari-box" id="shayariBox">
+                    <p id="shayariText">Loading shayari...</p>
+                </div>
+            </div>
+
+            <div class="nav-controls">
+                <button id="prevBtn" onclick="changeSlide(-1)" class="btn">❮ Previous</button>
+                <button id="nextBtn" onclick="changeSlide(1)" class="btn primary-btn">Next Photo ❯</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with Endless Love for Sonali (Ishu) 💕</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+EOF
+
+cat << 'EOF' > style.css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #feada6 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4a4a4a;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: #b31217;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #e63946;
+    letter-spacing: 1px;
+}
+
+.card-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(225, 112, 85, 0.25);
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: rgba(230, 57, 70, 0.85);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.image-wrapper {
+    width: 100%;
+    max-height: 420px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.shayari-box {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: #fff0f3;
+    border-left: 4px solid #ff4d6d;
+    border-radius: 10px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shayari-box p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #590d22;
+    font-weight: 500;
+    font-style: italic;
+    transition: opacity 0.3s ease;
+}
+
+.nav-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #ffccd5;
+    color: #590d22;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffb3c1;
+    transform: translateY(-2px);
+}
+
+.primary-btn {
+    background: #ff4d6d;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #c9184a;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #7209b7;
+}
+EOF
+
+cat << 'EOF' > script.js
+const galleryData = [
+    { img: "Sonali1.jpg", shayari: "Teri muskurahat hi meri pehchan hai, Sonali tum me hi basi meri jaan hai. ❤️" },
+    { img: "Sonali2.jpg", shayari: "Ishu, tum se shuru aur tum par hi khatam, meri har khushi ka rasta bas tum hi ho." },
+    { img: "Sonali3.jpg", shayari: "Chaand se bhi pyaara hai Sonali ka chehra, is dil par bas tumhara hi pehra hai. 💕" },
+    { img: "Sonali4.jpg", shayari: "Jab se dekha hai Ishu tumhari aankhon me, hum apna dil wahi bhool aaye hain." },
+    { img: "Sonali5.jpg", shayari: "Duniya ki sabse khoobsurat shayari ho tum Sonali, jise hum baar baar padhna chahte hain." },
+    { img: "Sonali6.jpg", shayari: "Har dua me tera hi naam aata hai Ishu, tum mil gaye to lagta hai zindagani mil gayi." },
+    { img: "Sonali7.jpg", shayari: "Sonali, tumhari ek jhalak hi kaafi hai mera poora din banane ke liye. ✨" },
+    { img: "Sonali8.jpg", shayari: "Ishu, dil karta hai bass tumhe dekhta rahu, tum meri zindagi ka sabse pyara khwab ho." },
+    { img: "Sonali9.jpg", shayari: "Mohabbat ki har ada tumse seekhi hai Sonali, tum mere dil ki dhadkan ho." },
+    { img: "Sonali10.jpg", shayari: "Pyaar to bahut log karte hain Ishu, par mera pyaar tumse beinteha aur sabse juda hai. ❤️" },
+    { img: "Sonali11.jpg", shayari: "Sonali, jitni khoobsurat tum ho, utni hi khoobsurat meri duniya tumhare aane se hui hai." },
+    { img: "Sonali12.jpg", shayari: "Mere har lamhe me bas tera hi zikr hai Ishu, tum se hi mera har kal hai." },
+    { img: "Sonali13.jpg", shayari: "Sonali, tum sirf mera pyaar nahi, mera sab kuch ho. 💞" },
+    { img: "Sonali14.jpg", shayari: "Hamesha mere sath rehna Ishu, kyunki tumhare bina ye dil adhura hai. 🔥❤️" }
+];
+
+let currentIndex = 0;
+
+function updateSlide() {
+    const currentImg = document.getElementById('currentImg');
+    const shayariText = document.getElementById('shayariText');
+    const photoNumber = document.getElementById('photoNumber');
+
+    currentImg.style.opacity = 0;
+    shayariText.style.opacity = 0;
+
+    setTimeout(() => {
+        currentImg.src = galleryData[currentIndex].img;
+        shayariText.innerText = galleryData[currentIndex].shayari;
+        photoNumber.innerText = `${currentIndex + 1} / ${galleryData.length}`;
+
+        currentImg.style.opacity = 1;
+        shayariText.style.opacity = 1;
+    }, 200);
+}
+
+function changeSlide(direction) {
+    currentIndex += direction;
+    if (currentIndex >= galleryData.length) {
+        currentIndex = 0;
+    } else if (currentIndex < 0) {
+        currentIndex = galleryData.length - 1;
+    }
+    updateSlide();
+}
+
+window.onload = () => {
+    updateSlide();
+};
+EOF
+
